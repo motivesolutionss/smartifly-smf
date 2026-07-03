@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand/Base Palette - Layered Dark Theme */
+  --color-background: #0a0a0b; /* Primary dark background */
+  --color-foreground: #ffffff; /* White heading color */
+  --color-body: #cbd5e1; /* Slate-300 body text */
+  --color-muted: #161618; /* Slate-100 surface-soft */
+  --color-muted-foreground: #94a3b8; /* Slate-500 muted text */
+  
+  --color-card: #121214; /* Card background */
+  --color-card-foreground: #cbd5e1;
+  
+  --color-primary: #dc2626; /* Red-600 Brand Accent */
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: #b91c1c;
+  --color-primary-soft: #270f11;
+  
+  --color-brand-soft: #1c0e10; /* Dark red soft background */
+  --color-indigo-soft: #200e12; /* Dark rose soft background */
+  
+  /* Custom Light Background Palette Tokens */
+  --color-slate-50: #0a0a0b;
+  --color-slate-100: #121214;
+  --color-blue-50: #1c0e10;
+  --color-indigo-50: #200e12;
+  --color-red-50: #1c0e10;
+  --color-rose-50: #200e12;
+  
+  /* Reusable Borders/Inputs */
+  --color-border: #1f1f23; /* Dark border */
+  --color-border-soft: #161618;
+  --color-input: #1f1f23;
+  --color-ring: #ef4444; /* Red-500 */
+  
+  /* Border Radii */
+  --radius-card: 1rem;
+  
+  /* Shadows */
+  --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.4), 0 2px 10px -1px rgba(0, 0, 0, 0.2);
+
+  /* Marquee Animations */
+  --animate-marquee-left: marquee-left 30s linear infinite;
+  --animate-marquee-right: marquee-right 30s linear infinite;
+
+  @keyframes marquee-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes marquee-right {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-body);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Force bg-white class elements to dark card color in dark mode */
+.bg-white {
+  background-color: var(--color-card) !important;
+}
+
+/* Force from-white and to-white gradient steps to resolve to card/background values */
+.from-white {
+  --tw-gradient-from: var(--color-card) !important;
+}
+.to-white {
+  --tw-gradient-to: var(--color-card) !important;
+}

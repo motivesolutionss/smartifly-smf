@@ -1,0 +1,13 @@
+services:
+  motive-solutions-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: motive-solutions-app
+    restart: always
+    ports:
+      - "127.0.0.1:3062:3000"
+    environment:
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+      - NEXT_TELEMETRY_DISABLED=1
