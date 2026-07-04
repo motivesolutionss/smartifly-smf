@@ -28,7 +28,7 @@ export default function PlatformBadgesSection() {
     <Section variant="slate-50" id="multi-platform-badges" className="py-6 overflow-hidden">
 
       {/* Single Infinite Marquee Track with Red Gradient Background */}
-      <div className="relative w-full overflow-hidden py-6 bg-gradient-to-r from-red-950/30 via-red-900/15 to-red-950/30 border-y border-red-950/25">
+      <div className="relative w-full overflow-hidden py-6 bg-gradient-to-r from-red-50 via-red-100/40 to-red-50 border-y border-red-100/60">
         {/* Soft edge fading mask */}
         <div className="absolute top-0 bottom-0 left-0 w-8 sm:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
         <div className="absolute top-0 bottom-0 right-0 w-8 sm:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
