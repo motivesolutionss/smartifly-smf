@@ -52,7 +52,12 @@ export default function HeroSection() {
             <Button href={ROUTES.CONTACT} size="lg" className="w-full sm:w-auto">
               Request a Project Quote
             </Button>
-            <Button href={ROUTES.SERVICES.ROOT} variant="outline" size="lg" className="w-full sm:w-auto border-zinc-700 text-white hover:bg-zinc-900 hover:text-white">
+            <Button
+              href={ROUTES.SERVICES.ROOT}
+              variant="ghost"
+              size="lg"
+              className="w-full sm:w-auto bg-[#161618]/40 border border-zinc-700 text-white hover:bg-[#161618] hover:text-white transition-all"
+            >
               Explore Our Services
             </Button>
           </div>
