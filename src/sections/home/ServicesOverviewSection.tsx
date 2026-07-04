@@ -4,13 +4,12 @@ import Container from "@/components/common/Container";
 import SectionHeader from "@/components/common/SectionHeader";
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import Badge from "@/components/ui/Badge";
 import { SERVICES } from "@/data/services";
 import { ROUTES } from "@/constants/routes";
 
 export default function ServicesOverviewSection() {
   return (
-    <Section variant="white" id="services-overview" hasBorderBottom={true}>
+    <Section variant="white" id="services-overview" hasBorderBottom={true} className="pt-8 md:pt-12">
       <Container>
         <SectionHeader
           title="Custom Software Solutions Built for Growth"
@@ -29,9 +28,6 @@ export default function ServicesOverviewSection() {
             return (
               <Card key={service.id} className="flex flex-col justify-between h-full bg-white border border-border shadow-xs hover:border-primary/20">
                 <CardHeader className="p-3 sm:p-6 pb-2">
-                  <Badge variant="soft" className="w-fit mb-2 sm:mb-4 text-[9px] sm:text-xs">
-                    {service.title.includes("&") ? "Systems" : "App"}
-                  </Badge>
                   <CardTitle className="text-sm sm:text-lg md:text-xl font-bold text-foreground line-clamp-2">
                     {service.title}
                   </CardTitle>

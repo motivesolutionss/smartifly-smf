@@ -11,21 +11,21 @@
   --color-card: #ffffff; /* White card background */
   --color-card-foreground: #0f172a;
   
-  --color-primary: #dc2626; /* Red-600 Brand Accent */
+  --color-primary: #001f3f; /* Deep Navy Blue Brand Accent */
   --color-primary-foreground: #ffffff;
-  --color-primary-hover: #b91c1c;
-  --color-primary-soft: #fef2f2;
+  --color-primary-hover: #00162d;
+  --color-primary-soft: #e6ebf2;
   
-  --color-brand-soft: #fef2f2; /* Light red soft background */
+  --color-brand-soft: #e6ebf2; /* Soft navy background */
   --color-indigo-soft: #eff6ff; /* Light blue soft background */
   
   /* Custom Background Palette Tokens */
   --color-slate-50: #f8fafc;
   --color-slate-100: #f1f5f9;
-  --color-blue-50: #eff6ff;
+  --color-blue-50: #e6ebf2;
   --color-indigo-50: #e0e7ff;
-  --color-red-50: #fef2f2;
-  --color-rose-50: #fff1f2;
+  --color-red-50: #e6ebf2;
+  --color-rose-50: #e6ebf2;
   
   /* Reusable Borders/Inputs */
   --color-border: #e2e8f0; /* Light border */

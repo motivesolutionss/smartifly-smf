@@ -108,7 +108,7 @@ export default function WhiteLabelSection() {
 
           {/* Floating Card: Logo Config */}
           <div className="absolute top-4 left-0 sm:left-4 bg-white border border-border rounded-lg p-2.5 shadow-md z-20 flex items-center gap-2">
-            <div className="w-6 h-6 rounded bg-red-100 flex items-center justify-center text-red-600 font-bold text-xs">L</div>
+            <div className="w-6 h-6 rounded bg-primary-soft flex items-center justify-center text-primary font-bold text-xs">L</div>
             <span className="text-[10px] font-semibold text-foreground">Custom Logo Loaded</span>
           </div>
 
