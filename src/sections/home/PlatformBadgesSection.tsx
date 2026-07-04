@@ -41,7 +41,7 @@ export default function PlatformBadgesSection() {
                 alt={item.name}
                 width={96}
                 height={96}
-                className="max-w-[70%] max-h-[70%] sm:max-w-full sm:max-h-full object-contain hover:scale-105 transition-transform duration-200"
+                className="max-w-[70%] max-h-[70%] sm:max-w-full sm:max-h-full object-contain w-auto h-auto hover:scale-105 transition-transform duration-200"
               />
             </div>
           ))}
