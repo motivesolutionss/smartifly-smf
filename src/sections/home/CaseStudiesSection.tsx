@@ -13,14 +13,14 @@ export default function CaseStudiesSection() {
     <Section variant="default" id="homepage-case-studies">
       <Container>
         <SectionHeader
-          title="Software Solutions Built for Real Business Needs"
-          eyebrow="Case Studies"
-          description="From streaming apps to business portals and e-commerce systems, Motive Solutions helps companies launch digital products that are practical, scalable, and built around their operations."
+          title="Proven IPTV Software Success"
+          eyebrow="Case Study"
+          description="Discover how we design, build, and deploy high-performance streaming platforms, featuring our flagship multi-screen deployment case study."
           align="center"
         />
 
-        {/* Case Studies 2x2 Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+        {/* Centered Case Study Card */}
+        <div className="max-w-2xl mx-auto mb-16">
           {CASE_STUDIES.map((study) => (
             <Card
               key={study.id}
@@ -82,17 +82,17 @@ export default function CaseStudiesSection() {
         {/* Small CTA Card below Case Studies */}
         <div className="max-w-3xl mx-auto p-8 rounded-2xl bg-slate-50 border border-border text-center shadow-xs">
           <h3 className="text-xl font-bold text-foreground mb-2">
-            Have a similar project in mind?
+            Have a similar streaming project in mind?
           </h3>
           <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-xl mx-auto">
-            Share your requirements and we will help you plan the right software solution for your business.
+            Share your requirements and we will help you plan the right player apps, API integrations, or white-label solutions for your streaming operations.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href={ROUTES.CONTACT}>
               Start a Project
             </Button>
             <Button href={ROUTES.CASE_STUDIES.ROOT} variant="outline">
-              View All Case Studies
+              View Case Study Detail
             </Button>
           </div>
         </div>

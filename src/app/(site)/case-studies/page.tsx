@@ -10,8 +10,8 @@ import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/comp
 import Button from "@/components/ui/Button";
 
 export const metadata = getMetadata({
-  title: "Case Studies",
-  description: "Explore Motive Solutions case studies across IPTV platforms, airline portals, automotive marketplaces, e-commerce stores, admin panels, and custom software solutions.",
+  title: "Case Studies | IPTV & Streaming Software",
+  description: "Explore Motive Solutions case studies demonstrating how we design, build, and deploy high-performance IPTV ecosystems and custom streaming apps.",
   path: "/case-studies",
 });
 
@@ -24,29 +24,29 @@ const CaseStudiesHeroVisual = () => (
     {/* Central Projects Node */}
     <div className="w-[120px] h-[120px] rounded-full bg-white border-2 border-primary/20 flex flex-col items-center justify-center text-center shadow-soft z-20">
       <span className="w-2.5 h-2.5 rounded-full bg-primary mb-1 animate-pulse" />
-      <span className="text-[10px] font-black text-foreground tracking-wide uppercase font-mono">Motive Hub</span>
+      <span className="text-[10px] font-black text-foreground tracking-wide uppercase font-mono">IPTV Hub</span>
       <span className="text-[7.5px] text-muted-foreground uppercase font-bold">Solutions</span>
     </div>
 
     {/* Project Cards */}
     <div className="absolute top-2 left-2 bg-white border border-border rounded-lg px-2.5 py-1.5 shadow-xs z-10 flex items-center gap-1.5">
       <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-      <span className="text-[8.5px] font-bold text-foreground">Streaming</span>
+      <span className="text-[8.5px] font-bold text-foreground">TV Players</span>
     </div>
 
     <div className="absolute top-6 right-2 bg-white border border-border rounded-lg px-2.5 py-1.5 shadow-xs z-10 flex items-center gap-1.5">
       <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
-      <span className="text-[8.5px] font-bold text-foreground">Travel Portal</span>
+      <span className="text-[8.5px] font-bold text-foreground">Mobile Apps</span>
     </div>
 
     <div className="absolute bottom-6 left-2 bg-white border border-border rounded-lg px-2.5 py-1.5 shadow-xs z-10 flex items-center gap-1.5">
       <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-      <span className="text-[8.5px] font-bold text-foreground">Marketplace</span>
+      <span className="text-[8.5px] font-bold text-foreground">API Middleware</span>
     </div>
 
     <div className="absolute bottom-2 right-2 bg-white border border-border rounded-lg px-2.5 py-1.5 shadow-xs z-10 flex items-center gap-1.5">
       <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-      <span className="text-[8.5px] font-bold text-foreground">Dashboards</span>
+      <span className="text-[8.5px] font-bold text-foreground">Admin Console</span>
     </div>
 
     {/* SVG Connector Lines */}
@@ -61,12 +61,12 @@ const CaseStudiesHeroVisual = () => (
 
 export default function CaseStudiesPage() {
   const industries = [
-    { name: "IPTV & OTT Platforms", desc: "Multi-screen player applications and provider API integrations." },
-    { name: "Travel & Airline Portals", desc: "Centralized reservation dashboards and ticketing operational tools." },
-    { name: "Automotive Marketplaces", desc: "Responsive listing portals and structured inventory management." },
-    { name: "E-Commerce Stores", desc: "Highly conversion-focused storefront architectures and checkout rules." },
-    { name: "Admin Panels & Dashboards", desc: "Role-based admin panels, notifications, and analytics centers." },
-    { name: "Custom Business Software", desc: "Tailored automation workflows, system middleware, and integrations." }
+    { name: "IPTV Player Apps", desc: "Multi-screen player apps with custom UI layouts and local database structures." },
+    { name: "Smart TV Platforms", desc: "TV-optimized D-pad apps for Samsung Tizen, LG webOS, Android TV, and Fire TV." },
+    { name: "OTT Video Platforms", desc: "Video-on-demand libraries, subscriber auth portals, and dynamic content feeds." },
+    { name: "Admin Panels & Analytics", desc: "Control dashboards for subscribers, devices, DNS configurations, and logs." },
+    { name: "API & Middleware Integrations", desc: "Optimized integrations with Stalker, Xtream Codes, and custom playlist feeds." },
+    { name: "White-Label Reseller Systems", desc: "Branded apps with automated packaging, DNS routing, and reselling controls." }
   ];
 
   const steps = [
@@ -88,10 +88,10 @@ export default function CaseStudiesPage() {
               Case Studies
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground leading-[1.1] mb-6">
-              Real Software Solutions for Real Business Needs
+              Proven Case Studies in IPTV & Streaming Software
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mb-8">
-              Explore how Motive Solutions helps businesses plan, design, and build practical digital products across streaming, travel, automotive, e-commerce, web platforms, admin systems, and custom software.
+              Explore how Motive Solutions helps operators and creators launch custom IPTV player apps, Smart TV platforms, streaming middleware, and secure administration systems worldwide.
             </p>
             <div className="flex flex-wrap gap-4 w-full sm:w-auto">
               <Button href={ROUTES.CONTACT} size="lg" className="w-full sm:w-auto">
@@ -112,13 +112,13 @@ export default function CaseStudiesPage() {
       <Section variant="default" id="featured-projects">
         <Container>
           <SectionHeader
-            title="Projects Built Across Multiple Industries"
+            title="Featured IPTV Platform Case Studies"
             eyebrow="Portfolio"
-            description="From IPTV ecosystems to business portals and online stores, our work focuses on clean user experiences, scalable architecture, and practical business workflows."
+            description="Discover our flagship deployments demonstrating high-performance video players, remote remote control navigation, and optimized API integrations."
             align="center"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+          <div className="max-w-2xl mx-auto mb-12">
             {CASE_STUDIES.map((study) => (
               <Card
                 key={study.id}
@@ -183,7 +183,7 @@ export default function CaseStudiesPage() {
         <Container>
           <SectionHeader
             title="Software Experience Across Practical Business Categories"
-            eyebrow="Industries"
+            eyebrow="Categories"
             align="center"
           />
 
@@ -257,7 +257,7 @@ export default function CaseStudiesPage() {
             </div>
 
             <span className="block text-xs font-semibold text-muted-foreground uppercase tracking-widest leading-relaxed max-w-xl mx-auto">
-              Custom IPTV & OTT apps • Smart TV platforms • web portals • admin panels • business software
+              Custom IPTV & OTT apps • Smart TV platforms • Web Players • Admin Panels • IPTV Middleware
             </span>
           </div>
         </Container>
