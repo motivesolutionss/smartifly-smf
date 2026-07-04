@@ -3,12 +3,10 @@ import { getMetadata } from "@/lib/seo";
 
 // Section Imports
 import HeroSection from "@/sections/home/HeroSection";
-import PlatformBadgesSection from "@/sections/home/PlatformBadgesSection";
 import ServicesOverviewSection from "@/sections/home/ServicesOverviewSection";
-import SupportedPlatformsSection from "@/sections/home/SupportedPlatformsSection";
 import FeaturesSection from "@/sections/home/FeaturesSection";
 import WhiteLabelSection from "@/sections/home/WhiteLabelSection";
-import AdminPanelSection from "@/sections/home/AdminPanelSection";
+
 import ProcessSection from "@/sections/home/ProcessSection";
 import CaseStudiesSection from "@/sections/home/CaseStudiesSection";
 import WhyChooseUsSection from "@/sections/home/WhyChooseUsSection";
@@ -26,11 +24,9 @@ export default function HomePage() {
     <div className="flex flex-col">
       <HeroSection />
       <ServicesOverviewSection />
-      <PlatformBadgesSection />
-      <SupportedPlatformsSection />
       <FeaturesSection />
       <WhiteLabelSection />
-      <AdminPanelSection />
+
       <ProcessSection />
       <CaseStudiesSection />
       <WhyChooseUsSection />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_CONFIG } from "@/constants/site";
 import { FOOTER_NAV_ITEMS } from "@/data/navigation";
 
@@ -12,14 +13,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Logo & Info column */}
           <div className="lg:col-span-2 flex flex-col gap-6">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg shadow-sm">
-                M
-              </div>
-              <span className="font-bold text-lg tracking-tight text-foreground">
-                {SITE_CONFIG.name}
-              </span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logos/motiveslogo.png"
+                alt={SITE_CONFIG.name}
+                width={176}
+                height={36}
+                className="h-9 w-auto object-contain"
+                style={{ width: "auto" }}
+              />
             </Link>
+
             <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
               {SITE_CONFIG.description}
             </p>

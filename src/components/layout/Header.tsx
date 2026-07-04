@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { SITE_CONFIG } from "@/constants/site";
 import { ROUTES } from "@/constants/routes";
@@ -25,14 +26,18 @@ export default function Header() {
     <header className="sticky top-0 z-40 w-full bg-card/85 backdrop-blur-md border-b border-border transition-all">
       <div className="max-w-7xl lg:max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-6 h-20 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link href={ROUTES.HOME} className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl shadow-md group-hover:scale-105 transition-transform duration-200">
-            M
-          </div>
-          <span className="font-bold text-xl tracking-tight text-foreground transition-colors group-hover:text-primary">
-            {SITE_CONFIG.name}
-          </span>
+        <Link href={ROUTES.HOME} className="flex items-center group">
+          <Image
+            src="/logos/motiveslogo.png"
+            alt={SITE_CONFIG.name}
+            width={195}
+            height={40}
+            className="h-10 w-auto object-contain group-hover:scale-102 transition-transform duration-200"
+            style={{ width: "auto" }}
+            priority
+          />
         </Link>
+
 
         {/* Desktop Navigation */}
         <MainNavigation />

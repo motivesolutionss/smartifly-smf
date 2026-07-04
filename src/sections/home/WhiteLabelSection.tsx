@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 import Section from "@/components/common/Section";
 import Container from "@/components/common/Container";
 import Button from "@/components/ui/Button";
@@ -17,9 +18,23 @@ export default function WhiteLabelSection() {
 
   return (
     <Section variant="blue-50" id="white-label-section" className="bg-gradient-to-r from-blue-50 to-indigo-50 border-y border-border/80">
-      <Container className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center">
-        {/* Left Column: Context and details */}
-        <div className="lg:col-span-7 flex flex-col items-start text-left">
+      <Container className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        {/* Left Column: Premium Generated Image (Enlarged to 6/12 columns, aspect-square for 1:1 fit) */}
+        <div className="lg:col-span-6 relative w-full aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white/60 bg-slate-900 group">
+          <Image
+            src="/images/whitelabel_builder_mockup.png"
+            alt="White-Label IPTV and OTT App Builder Mockup"
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-103"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority
+          />
+          {/* Subtle gradient overlay to match blue/indigo section theme */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent mix-blend-overlay pointer-events-none" />
+        </div>
+
+        {/* Right Column: Context and details (6/12 columns) */}
+        <div className="lg:col-span-6 flex flex-col items-start text-left">
           <Badge variant="soft" className="mb-4">
             White-Label Streaming Apps
           </Badge>
@@ -54,68 +69,6 @@ export default function WhiteLabelSection() {
             <Button href={ROUTES.SERVICES.WHITE_LABEL} variant="outline" size="lg" className="w-full sm:w-auto">
               View IPTV Services
             </Button>
-          </div>
-        </div>
-
-        {/* Right Column: Interactive CSS Brand Customization Mockup */}
-        <div className="lg:col-span-5 relative w-full h-[400px] sm:h-[450px] flex items-center justify-center">
-          {/* Backdrop Glow */}
-          <div className="absolute w-[300px] sm:w-[350px] h-[300px] sm:h-[350px] rounded-full bg-gradient-to-tr from-red-200 to-rose-100 opacity-60 blur-3xl" />
-
-          {/* Builder Panel */}
-          <div className="absolute w-[90%] sm:w-[85%] bg-white border border-border rounded-xl shadow-soft p-5 z-10 flex flex-col gap-4 hover:shadow-lg transition-shadow duration-300">
-            <div className="flex items-center justify-between border-b border-border/60 pb-3">
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-primary" />
-                <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider font-mono">App Configurator</span>
-              </div>
-              <div className="px-2 py-0.5 rounded bg-primary/10 text-primary text-[8px] font-bold uppercase tracking-wide">
-                Active Builder
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-3">
-              {/* App Name Input Field */}
-              <div className="flex flex-col gap-1.5">
-                <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-wide">App Bundle Name</span>
-                <div className="p-3 border border-border bg-slate-50 rounded-lg text-xs font-semibold text-foreground flex items-center justify-between">
-                  <span>My Brand Player</span>
-                  <span className="text-[8px] text-green-500 font-bold uppercase">Verified</span>
-                </div>
-              </div>
-
-              {/* Accent Color Selection */}
-              <div className="flex flex-col gap-1.5">
-                <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-wide">Accent Theme Color</span>
-                <div className="flex gap-2.5">
-                  <span className="w-5 h-5 rounded-full bg-primary border-2 border-primary/20 cursor-pointer shadow-xs" />
-                  <span className="w-5 h-5 rounded-full bg-teal-500 cursor-pointer hover:scale-105 transition-transform" />
-                  <span className="w-5 h-5 rounded-full bg-orange-500 cursor-pointer hover:scale-105 transition-transform" />
-                  <span className="w-5 h-5 rounded-full bg-purple-500 cursor-pointer hover:scale-105 transition-transform" />
-                  <span className="w-5 h-5 rounded-full bg-slate-700 cursor-pointer hover:scale-105 transition-transform" />
-                </div>
-              </div>
-
-              {/* API Endpoint Input Field */}
-              <div className="flex flex-col gap-1.5">
-                <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-wide">Operator API Endpoint</span>
-                <div className="p-2.5 bg-slate-50 border border-border/60 rounded text-[9.5px] text-muted-foreground font-mono truncate">
-                  https://api.yourbrand.com/xtream/v2
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Floating Card: Logo Config */}
-          <div className="absolute top-4 left-0 sm:left-4 bg-white border border-border rounded-lg p-2.5 shadow-md z-20 flex items-center gap-2">
-            <div className="w-6 h-6 rounded bg-primary-soft flex items-center justify-center text-primary font-bold text-xs">L</div>
-            <span className="text-[10px] font-semibold text-foreground">Custom Logo Loaded</span>
-          </div>
-
-          {/* Floating Card: Device Targets */}
-          <div className="absolute bottom-4 right-0 sm:right-4 bg-white border border-border rounded-lg p-2.5 shadow-md z-20 flex items-center gap-2">
-            <span className="text-[9px] font-bold text-primary uppercase tracking-wide">Build Export:</span>
-            <span className="text-[10px] text-foreground font-semibold">Tizen, webOS, tvOS, APK</span>
           </div>
         </div>
       </Container>
