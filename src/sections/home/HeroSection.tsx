@@ -22,12 +22,12 @@ export default function HeroSection() {
           src="/images/smpbanner.png"
           alt="Motive Solutions Console Mockup"
           fill
-          className="object-contain object-right opacity-65"
+          className="object-contain object-right opacity-90"
           sizes="100vw"
           priority
         />
         {/* Gradient overlay to fade to solid background color for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
       </div>
 
       <Container className="relative z-10">
